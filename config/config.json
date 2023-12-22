@@ -1,23 +1,25 @@
-{
-  "development": {
-    "username": "tecker58_sergio",
-    "password": "Infnet#2023",
-    "database": "tecker58_mystore2",
-    "host": "162.241.203.236",
-    "dialect": "mysql"
+require('dotenv').config();
+
+module.exports = {
+  development: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'mysql',
   },
-  "test": {
-    "username": "root",
-    "password": "root",
-    "database": "mystore3",
-    "host": "localhost",
-    "dialect": "mysql"
+  test: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'mysql',
   },
-  "production": {
-    "username": "root",
-    "password": "root",
-    "database": "mystore3",
-    "host": "localhost",
-    "dialect": "mysql"
-  }
-}
+  production: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'mysql',
+  },
+};
